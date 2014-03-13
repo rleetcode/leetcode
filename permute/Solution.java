@@ -10,20 +10,14 @@ public class Solution {
     	result.add(new ArrayList<Integer>());
     	
     	for(int i=0;i<num.length;i++){
-    	    ArrayList<ArrayList<Integer> > cur = new ArrayList<ArrayList<Integer> >();
-    	   // if(result.size()==0){
-    	   //     ArrayList<Integer> na = new ArrayList<Integer>();
-    	   //     na.add(num[i]);
-    	   //     cur.add(na);
-    	   // }else{
-    	        for(ArrayList<Integer> na:result){
-    	           for(int j=0;j<=na.size();j++){
-    	               ArrayList<Integer> n = new ArrayList<Integer>(na);
-    	               n.add(j,num[i]);
-        	           cur.add(n);
-    	           }
+		ArrayList<ArrayList<Integer> > cur = new ArrayList<ArrayList<Integer> >();
+	        for(ArrayList<Integer> na:result){
+	           for(int j=0;j<=na.size();j++){
+				   ArrayList<Integer> n = new ArrayList<Integer>(na);
+    	           n.add(j,num[i]);
+        	       cur.add(n);
     	        }
-    	    //}
+    	    }
     	    result = new ArrayList<ArrayList<Integer> >(cur);
     	}
     	
